@@ -1,0 +1,26 @@
+.component_holder {
+  width: 100%;
+  min-height: 30px;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: row;
+  flex-flow: nowrap row;
+  justify-content: space-around;
+  align-content: space-between;
+
+  box-shadow: 0 4px 2px -2px gray;
+}
+
+.komponent {
+  border: 1px solid black;
+  height: 50px;
+
+  &:hover {
+    box-shadow: 5px 10px 18px grey;
+  }
+
+  div {
+    align-content: center;
+  }
+}

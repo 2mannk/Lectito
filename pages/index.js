@@ -2,6 +2,7 @@
 // pierwsza strona, którą uzytkownik widzi po zalogowaniu do aplikacji
 
 import Head from "next/head";
+import Header from "@/components/Header";
 
 export default function MainPage() {
     return (
@@ -10,7 +11,7 @@ export default function MainPage() {
                 <title>Lectito - write about you</title>
             </Head>
             <main>
-                Hello world
+                <Header />
             </main>
         </>
     )
