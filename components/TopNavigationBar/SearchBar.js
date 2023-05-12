@@ -1,37 +1,37 @@
-import { useState } from "react";
-import Image from "next/image";
-import styles from "../../styles/Header.module.scss";
+import React, { useState } from 'react';
 
-export default function SearchBar({ path, }) {
-  const [query, setQuery] = useState("");
+export default function SearchBar() {
+  const [phrase, setPhrase] = useState('');
 
-  const handleInputChange = (e) => {
-    setQuery(e.target.value);
-  };
+  const ustawiamWyszukiwanie = (wartosc) => {
+    setPhrase(wartosc);
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    // Tutaj można przeprowadzić wyszukiwanie na podstawie wartości z `query`
-    console.log(`Szukaj: ${query}`);
-  };
+    console.log(wartosc);
+  }
 
   return (
-    <form onSubmit={handleFormSubmit} className={styles.search_bar_form}>
-      <button type="submit" className={styles.search_bar_button} >
-        <Image
-          src={ path }
-          layout='fill' 
-          alt="Search Icon"
-          objectFit="contain" 
-        />
+    <form action="/" class="flex flex-row flex-nowrap p-2 border-2 rounded">
+      <button class="transform rotate-90">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-6 h-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+          />
+        </svg>
       </button>
-
-      <input
-        type="text"
-        placeholder="Wyszukaj..."
-        value={query}
-        onChange={handleInputChange}
-        className={styles.search_bar_input}
+      <input 
+        type='text' 
+        name="searchingPhrase" 
+        class='rounded h-15'
+        onChange={(e) => ustawiamWyszukiwanie(e.target.value) } 
       />
     </form>
   );
