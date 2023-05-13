@@ -10,8 +10,8 @@ export default function SearchBar() {
   }
 
   return (
-    <form action="/" class="flex flex-row flex-nowrap p-2 border-2 rounded">
-      <button class="transform rotate-90">
+    <form action="/" class="flex-1 max-w-md w-full h-full flex flex-row flex-nowrap p-2 gap-2">
+      <button class="transform rotate-90 h-full self-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -30,7 +30,7 @@ export default function SearchBar() {
       <input 
         type='text' 
         name="searchingPhrase" 
-        class='rounded h-15'
+        class='rounded-lg pl-2 text-lg h-10 self-center w-full'
         onChange={(e) => ustawiamWyszukiwanie(e.target.value) } 
       />
     </form>

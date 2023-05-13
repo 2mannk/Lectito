@@ -11,8 +11,8 @@ export default function MainPage() {
       <Head>
         <title>Lectito - write about you</title>
       </Head>
-      <main class="bg-red-400 h-screen w-screen">
-        <section class='h-20'>
+      <main class="bg-[#eeeee4] h-screen w-screen">
+        <section class=''>
           <NavigationBar />
         </section>
         <section class='b-2 h-full'>

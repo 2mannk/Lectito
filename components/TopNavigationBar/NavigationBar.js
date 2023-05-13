@@ -1,9 +1,9 @@
 import Link from "next/link";
-import SearchBar from './SearchBar';
+import SearchBar from "./SearchBar";
 
 export default function NavigationBar() {
   return (
-    <div class="h-full w-screen flex flex-row justify-between border-2 bg-lime-400 gap-10 p-5 align-middle content-center">
+    <div class="h-full w-screen flex flex-row justify-between border-2 bg-[#1e81b0] p-5 align-middle content-center rounded-b-lg">
       {/* LOGO | search-bar | profil */}
       <div class="flex justify-center items-center rounded hover:bg-white">
         <Link href={"/"}>
@@ -23,9 +23,9 @@ export default function NavigationBar() {
           </svg>
         </Link>
       </div>
-      <div class="">
+
       <SearchBar />
-      </div>
+
       <div class="flex justify-center items-center rounded hover:bg-white">
         <Link href={"/"}>
           <svg
