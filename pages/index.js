@@ -3,7 +3,7 @@
 
 import Head from "next/head";
 import NavigationBar from "../components/TopNavigationBar/NavigationBar";
-import Grid from "@/components/items/Grid";
+import Content from "./content";
 
 export default function MainPage() {
   return (
@@ -16,7 +16,7 @@ export default function MainPage() {
           <NavigationBar />
         </section>
         <section class='b-2 h-full'>
-          <Grid />
+          <Content />
         </section>
       </main>
     </>
